@@ -4,7 +4,7 @@ from time import time
 
 class Heroes:
     name = "LuarHero"
-    damage = 6
+    damage = 50
     life = 650
     level = 1
     atack = False
