@@ -14,7 +14,7 @@ class Heroes:
         self.attack=False
 
 FirstPlayer = Heroes()
-inimigo = Heroes()
+EnemyPlayer = Heroes()
 
 def main():
     Start()
@@ -82,9 +82,9 @@ def AttackEnemy(luckyNumber,action):
         FirstPlayer.PersonAttackOn()
         while FirstPlayer.attack:
             print(f"Seu Numero da Sorte Foi: {luckyNumber}")
-            print("A Vida do Inimigo Abaixou de ",inimigo.life)
-            inimigo.life = (inimigo.life-FirstPlayer.damage)
-            print("Para: ",inimigo.life)
+            print("A Vida do Inimigo Abaixou de ",EnemyPlayer.life)
+            EnemyPlayer.life = (EnemyPlayer.life-FirstPlayer.damage)
+            print("Para: ",EnemyPlayer.life)
             print("")
             FirstPlayer.PersonAttackOff()
     elif (action == 1) and (luckyNumber < 5):
@@ -102,15 +102,15 @@ def EnemyAttack(EnemyAction):
     enemyRandomNumber= None
     enemyRandomNumber = randomNumber()
     if (EnemyAction == 1) and (enemyRandomNumber >=5 ):
-        inimigo.PersonAttackOn()
-        while inimigo.attack:
+        EnemyPlayer.PersonAttackOn()
+        while EnemyPlayer.attack:
             print(f"O Numero da Sorte Do Inimigo Foi: {enemyRandomNumber}")
             print("O Inimigo Acertou o Ataque em Você!")
             print(f"Sua vida caiu de {FirstPlayer.life}")
-            FirstPlayer.life = FirstPlayer.life-inimigo.damage
+            FirstPlayer.life = FirstPlayer.life-EnemyPlayer.damage
             print(F"Para: {FirstPlayer.life}")
             print("")
-            inimigo.PersonAttackOff()
+            EnemyPlayer.PersonAttackOff()
         
     elif (EnemyAction == 1) and (enemyRandomNumber < 5 ):
         print(f"O Numero da Sorte do Inimigo Foi: {enemyRandomNumber}")
@@ -126,11 +126,11 @@ def EnemyDefense(EnemyAction):
     DefensiveHealing = 50
     DefensiveHealingFail = 10
     if (EnemyAction == 2) and (enemyRandomNumber >=5 ):
-        inimigo.PersonAttackOff
+        EnemyPlayer.PersonAttackOff
         print("O Inimigo Se Defendeu Com Sucesso!")
-        print(f"Vida Do Inimigo Antes Da Defesa: {inimigo.life}")
-        inimigo.life = inimigo.life+DefensiveHealing
-        print(f"Vida Do Inimigo Atual: {inimigo.life}")
+        print(f"Vida Do Inimigo Antes Da Defesa: {EnemyPlayer.life}")
+        EnemyPlayer.life = EnemyPlayer.life+DefensiveHealing
+        print(f"Vida Do Inimigo Atual: {EnemyPlayer.life}")
     elif (EnemyAction == 2) and (enemyRandomNumber < 5):
         print("A Defesa Do Inimigo Falhou Ele Perdeu 10 De Vida!")
         FirstPlayer.life = FirstPlayer.life-DefensiveHealingFail
@@ -156,7 +156,7 @@ def CheckVitoryAndDefeat():
         input("Pressione Enter Para Continuar...")
         clear()
         exit()
-    elif (inimigo.life <= 0 ):
+    elif (EnemyPlayer.life <= 0 ):
         print("A Vida do Inimigo Chegou A Zero")
         print("Parabens, Você Ganhouu!!!")
         input("Pressione Enter Para Continuar...")
@@ -175,10 +175,10 @@ def PlayerAndEnemyStatus(action):
         print(F"Nivel do Personagem: {FirstPlayer.level}")
         print("="*15)
         print("Personagem Inimigo:")
-        print(F"Nome do Personagem: {inimigo.name}")
-        print(F"Dano do Personagem: {inimigo.damage}")
-        print(F"Vida do Personagem: {inimigo.life}")
-        print(F"Nivel do Personagem: {inimigo.level}")
+        print(F"Nome do Personagem: {EnemyPlayer.name}")
+        print(F"Dano do Personagem: {EnemyPlayer.damage}")
+        print(F"Vida do Personagem: {EnemyPlayer.life}")
+        print(F"Nivel do Personagem: {EnemyPlayer.level}")
     else:
         pass
 
@@ -187,6 +187,5 @@ def clear():
         os.system('cls')
     else:
         os.system('clear')
-
-
+        
 main()
