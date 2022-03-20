@@ -2,7 +2,8 @@
 É um jogo Via Terminal onde seu objetivo é derrotar o oponente
 ### Como Rodar o Jogo ?
 Primeiramente você precisa do Python Instalado em Seu Computador!
-Você pode baixar diretamente do site
+
+Você pode baixar diretamente do site!
 
 Clicando Em Python abaixo você será redirecionado:
 
