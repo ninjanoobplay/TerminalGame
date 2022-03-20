@@ -18,5 +18,5 @@ Você **Baixa** e **Extrai** o Arquivo para pasta que desejar:
 
 ## Imagem Inicial Do Jogo:
 
-<img align="left" src="https://github.com/ninjanoobplay/TerminalGame/blob/main/imgs/welcome.png" width="300"/>
+<img align="left" src="https://github.com/ninjanoobplay/TerminalGame/blob/main/imgs/welcome.png" width="500"/>
 
