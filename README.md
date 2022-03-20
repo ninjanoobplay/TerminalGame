@@ -16,4 +16,7 @@ Você **Baixa** e **Extrai** o Arquivo para pasta que desejar:
 
 - Você abre o jogo com duplo click no arquivo **Start** dentro da pasta que você **baixou/extraiu** 
 
+## Imagem Inicial Do Jogo:
+
+<img align="left" src="https://github.com/ninjanoobplay/TerminalGame/blob/main/imgs/welcome.png" width="300"/>
 
